@@ -15,7 +15,13 @@ router.get('/', (req, res)=>{
 router.get('/:id', (req, res) => {
     const id = req.params.id;
 
-    res.send(`Post with ID ${id}`);
+    // res.send(`Post with ID ${id}`);
+
+    posts.filter((element) =>{
+        if (element.id == id){
+            res.send(element) 
+        }
+    })
 })
 
 //Store
