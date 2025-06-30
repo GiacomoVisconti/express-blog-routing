@@ -7,7 +7,8 @@ const posts = require('../db.js');
 
 //Index
 router.get('/', (req, res)=>{
-    res.send('List of posts');
+    // res.send('List of posts');
+    res.json(posts)
 })
 
 // Show
