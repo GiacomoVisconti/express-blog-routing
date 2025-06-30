@@ -18,8 +18,10 @@ router.get('/:id', (req, res) => {
     // res.send(`Post with ID ${id}`);
 
     posts.filter((element) =>{
-        if (element.id == id){
+        if (element.id === parseInt(id)){
             res.send(element) 
+
+            
         }
     })
 })
